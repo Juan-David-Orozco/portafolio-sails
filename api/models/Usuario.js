@@ -1,11 +1,11 @@
 /**
- * Articulo.js
+ * Usuario.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
 
-module.exports = {
+ module.exports = {
 
   attributes: {
 
@@ -13,13 +13,9 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    descripcion: { type: 'string' },
+    nombre: { type: 'string' },
 
-    precio: { type: 'number' },
-
-    modelo: { type: 'string' },
-
-    marca: { type: 'string' },
+    email: { type: 'string' }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -29,16 +25,7 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-    
-    usuario: {
-      model: 'usuario',
-      columnName: 'usuario_id'
-    },
 
-    comentarios: {
-      collection: 'comentario',
-      via: 'articulo'
-    }
   },
 
 };

@@ -9,6 +9,8 @@
       <th>Modelo</th>
       <th>Descripción</th>
       <th>Precio</th>
+      <th>Usuario</th>
+      <th>Comentarios</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +20,14 @@
         <td><%=articulo.modelo%></td>
         <td><%=articulo.descripcion%></td>
         <td><%=articulo.precio%></td>
+        <td><%=articulo.usuario.nombre%></td>
+        <td>
+          <ul>
+            <% articulo.comentarios.forEach( comentario => { %>
+              <li><%=comentario.descripcion%></li>
+            <% }) %>
+          </ul>
+        </td>
       </tr>
     <% }) %>
   </tbody>

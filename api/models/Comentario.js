@@ -5,7 +5,7 @@
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
 
-module.exports = {
+ module.exports = {
 
   attributes: {
 
@@ -15,12 +15,6 @@ module.exports = {
 
     descripcion: { type: 'string' },
 
-    precio: { type: 'number' },
-
-    modelo: { type: 'string' },
-
-    marca: { type: 'string' },
-
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -29,16 +23,11 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-    
-    usuario: {
-      model: 'usuario',
-      columnName: 'usuario_id'
+    articulo: {
+      model: 'articulo',
+      columnName: 'articulo_id'
     },
 
-    comentarios: {
-      collection: 'comentario',
-      via: 'articulo'
-    }
   },
 
 };

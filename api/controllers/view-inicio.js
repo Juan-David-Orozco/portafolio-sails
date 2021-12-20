@@ -18,12 +18,7 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    const articulos = await Articulo.find({
-      where: {
-        precio: {'>':20}
-      },
-      sort: 'descripcion ASC'
-    })
+    const articulos = await Articulo.find().populate('usuario').populate('comentarios')
     
     return exits.success({articulos});
 
