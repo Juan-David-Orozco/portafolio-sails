@@ -24,9 +24,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-   '/': { view: 'pages/homepage' },
+   // '/': { view: 'pages/homepage' },
+   '/': { action: 'view-inicio' },
    '/acerca-de': { view: 'pages/acerca_de' },
    'GET /contacto': { action: 'view-contacto' },
+   '/crear': { action: 'crear' },
+
 
   /***************************************************************************
   *                                                                          *

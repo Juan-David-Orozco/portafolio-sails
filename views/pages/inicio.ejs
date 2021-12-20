@@ -1,0 +1,24 @@
+<h1>Inicio</h1>
+
+<p>Articulos disponibles</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Descripción</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% articulos.forEach(articulo=> { %>
+      <tr>
+        <td><%=articulo.marca%></td>
+        <td><%=articulo.modelo%></td>
+        <td><%=articulo.descripcion%></td>
+        <td><%=articulo.precio%></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
