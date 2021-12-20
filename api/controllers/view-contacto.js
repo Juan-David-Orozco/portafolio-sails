@@ -19,7 +19,9 @@ module.exports = {
   fn: async function (inputs, exits) {
 
     // Respond with view.
-    return exits.success();
+    const vendedores = await Vendedor.find()
+
+    return exits.success({vendedores});
 
   }
 
