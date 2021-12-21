@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>id</th>
       <th>Marca</th>
       <th>Modelo</th>
       <th>Descripción</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% articulos.forEach(articulo=> { %>
       <tr>
+        <td><%=articulo.id%></td>
         <td><%=articulo.marca%></td>
         <td><%=articulo.modelo%></td>
         <td><%=articulo.descripcion%></td>

@@ -29,7 +29,8 @@ module.exports.routes = {
    '/acerca-de': { view: 'pages/acerca_de' },
    'GET /contacto': { action: 'view-contacto' },
    '/crear': { action: 'crear' },
-
+   '/editar': { action: 'editar' },
+   '/eliminar': { action: 'eliminar' },
 
   /***************************************************************************
   *                                                                          *
