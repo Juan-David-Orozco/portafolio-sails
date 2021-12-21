@@ -41,5 +41,10 @@ module.exports = {
     }
   },
 
+  beforeCreate(valores, proceed){
+    valores.impuesto = valores.precio * 5/100.0
+    return proceed();
+  }
+
 };
 
