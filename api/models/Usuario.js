@@ -13,9 +13,17 @@
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    nombre: { type: 'string' },
+    nombre: { 
+      type: 'string',
+      required: true,
+      minLength: 2
+    },
 
-    email: { type: 'string' }
+    email: { 
+      type: 'string',
+      required: true,
+      isEmail: true
+    }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
