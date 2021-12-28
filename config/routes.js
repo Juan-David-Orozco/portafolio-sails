@@ -25,12 +25,25 @@ module.exports.routes = {
   ***************************************************************************/
 
    // '/': { view: 'pages/homepage' },
-   '/': { action: 'view-inicio' },
-   '/acerca-de': { view: 'pages/acerca_de' },
-   'GET /contacto': { action: 'view-contacto' },
-   '/crear': { action: 'crear' },
-   '/editar': { action: 'editar' },
-   '/eliminar': { action: 'eliminar' },
+  '/': {
+    action: 'view-inicio',
+    locals: {
+      layout: 'layouts/iniciado',
+      titulo: 'Inicio'
+    }
+  },
+  '/hola': {
+    action: 'view-inicio',
+    locals: {
+      layout: 'layouts/iniciado',
+      titulo: 'Hola'
+    }
+  },
+  '/acerca-de': { view: 'pages/acerca_de' },
+  'GET /contacto': { action: 'view-contacto' },
+  '/crear': { action: 'crear' },
+  '/editar': { action: 'editar' },
+  '/eliminar': { action: 'eliminar' },
 
   /***************************************************************************
   *                                                                          *
