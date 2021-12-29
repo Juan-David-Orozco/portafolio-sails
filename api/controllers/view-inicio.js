@@ -26,20 +26,14 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    //sails.helpers.nombreCompleto("juan", "gil")
-    let nombreCompleto = await sails.helpers.nombreCompleto("ana", "gil")
+    // sails.log.info("INFO")
 
-    console.log('nombreCompleto: ', nombreCompleto);
-
-    let articulos
-    if (inputs.precio) {
-      articulos = await Articulo.find({precio: {">": inputs.precio}}).populate('usuario').populate('comentarios')
-    }
-    else {
-      articulos = await Articulo.find().populate('usuario').populate('comentarios')
-    }
-    
+    const articulos = await Articulo.find().populate('usuario').populate('comentarios')
     return exits.success({articulos: articulos});
+
+    // sails.log.warn("WARN")
+    // sails.log.error("ERROR")
+    // sails.log.debug(articulos)
 
   }
 

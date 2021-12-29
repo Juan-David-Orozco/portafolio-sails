@@ -29,16 +29,17 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-    // order: [
-    //   'cookieParser',
-    //   'session',
-    //   'bodyParser',
-    //   'compress',
-    //   'poweredBy',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    // ],
+    order: [
+      'cookieParser',
+      'session',
+      'bodyParser',
+      'compress',
+      'poweredBy',
+      'bitacora',
+      'router',
+      'www',
+      'favicon',
+    ],
 
 
     /***************************************************************************
@@ -54,6 +55,13 @@ module.exports.http = {
     //   var middlewareFn = skipper({ strict: true });
     //   return middlewareFn;
     // })(),
+
+    bitacora : (function bitacora(){
+      return function (req,res,next){
+        sails.log.debug(req.url)
+        return next();
+      }
+    })()
 
   },
 
