@@ -28,8 +28,9 @@ module.exports.routes = {
   '/': {
     action: 'view-inicio',
     locals: {
-      layout: 'layouts/iniciado',
-      titulo: 'Inicio'
+      layout: 'layouts/layout',
+      titulo: 'Inicio',
+      titulo_tabla: "Articulos"
     }
   },
   '/hola': {
