@@ -6,6 +6,14 @@ module.exports = {
 
   description: 'Display "Inicio" page.',
 
+  inputs: {
+
+    precio: {
+      type: 'number',
+      required: false
+    }
+
+  },
 
   exits: {
 
@@ -18,9 +26,15 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
-    const articulos = await Articulo.find().populate('usuario').populate('comentarios')
+    let articulos
+    if (inputs.precio) {
+      articulos = await Articulo.find({precio: {">": inputs.precio}}).populate('usuario').populate('comentarios')
+    }
+    else {
+      articulos = await Articulo.find().populate('usuario').populate('comentarios')
+    }
     
-    return exits.success({articulos});
+    return exits.success({articulos: articulos});
 
   }
 
