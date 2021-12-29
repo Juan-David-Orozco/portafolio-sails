@@ -1,4 +1,5 @@
 {
-  "Welcome": "Bienvenido",
-  "A brand new app.": "Una nueva aplicación."
+  "Marca": "Marca",
+  "Modelo": "Modelo",
+  "Bienvenido: %s": "Bienvenido: %s"
 }
