@@ -46,6 +46,10 @@ module.exports.routes = {
   '/editar': { action: 'editar' },
   '/eliminar': { action: 'eliminar' },
 
+  '/accion1': { action: 'accion1' },
+  '/accionUno': 'EjemploController.accionUno',
+  '/accionDos': 'EjemploController.accionDos',
+
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
