@@ -26,6 +26,11 @@ module.exports = {
 
   fn: async function (inputs, exits) {
 
+    //sails.helpers.nombreCompleto("juan", "gil")
+    let nombreCompleto = await sails.helpers.nombreCompleto("ana", "gil")
+
+    console.log('nombreCompleto: ', nombreCompleto);
+
     let articulos
     if (inputs.precio) {
       articulos = await Articulo.find({precio: {">": inputs.precio}}).populate('usuario').populate('comentarios')
